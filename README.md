@@ -55,6 +55,24 @@ The final line of a successful build indicates where to find the final output PD
 Output document: source/build/Sample-Project_Your-Name.pdf
 ```
 
+## Sample output
+
+* See: [sample/Sample-Project_Your-Name.pdf](sample/Sample-Project_Your-Name.pdf)
+
+### Cover page and table of contents
+
+Illustrating cover page and automated table of contents.
+
+<img src="screenshots/page001.png" width="45%" />
+<img src="screenshots/page002.png" width="45%" />
+
+### Methodology and bibliography
+
+Illustrating footnotes, citations, formulae, figures, and automated bibliography.
+
+<img src="screenshots/page006.png" width="45%" />
+<img src="screenshots/page010.png" width="45%" />
+
 ## Source files
 
 Place your source files in the `source/` directory. The build script expects to find:
