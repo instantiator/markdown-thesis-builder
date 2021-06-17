@@ -1,6 +1,6 @@
 #!/bin/sh
 
-brew install ghostscript
+brew install ghostscript imagemagick
 gs -dNOPAUSE -sDEVICE=png16m -r256 -sOutputFile=page%03d.png $1
 
 for FILENAME in `ls page*.png | sort`; do
