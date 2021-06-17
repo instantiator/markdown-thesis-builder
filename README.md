@@ -63,15 +63,13 @@ Output document: source/build/Sample-Project_Your-Name.pdf
 
 Illustrating cover page and automated table of contents.
 
-<img src="screenshots/page001.png" width="45%" />
-<img src="screenshots/page002.png" width="45%" />
+<img src="screenshots/page001.png" width="45%" /><img src="screenshots/page002.png" width="45%" />
 
 ### Methodology and bibliography
 
 Illustrating footnotes, citations, formulae, figures, and automated bibliography.
 
-<img src="screenshots/page006.png" width="45%" />
-<img src="screenshots/page010.png" width="45%" />
+<img src="screenshots/page006.png" width="45%" /><img src="screenshots/page010.png" width="45%" />
 
 ## Source files
 
