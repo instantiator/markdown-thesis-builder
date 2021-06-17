@@ -5,13 +5,17 @@
 This is a template for building a thesis PDF that's written in markdown, using features and styles from LaTeX.
 
 * Runs in a Docker container for portability.
+* Allows you to write primarily in Markdown for simplicity.
+
+Markdown is easy to write, and will help you to write the bulk of your document. This project supports a few additional features you may also need:
+
 * Includes support for a cover page (not numbered).
 * Includes support for building a table of contents.
 * Numbers the various main sections of the document.
 * Includes support for LaTeX mathematics / formulae.
 * Includes support for citations, and a BibTex bibliography.
 
-The document is built using a Docker container that contains everything it needs.
+The whole document is built from source markdown files using a Docker container that contains everything it needs. The output is a PDF document.
 
 ## Prerequisites
 
