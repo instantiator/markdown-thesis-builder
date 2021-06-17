@@ -118,7 +118,7 @@ CSL styles are available at the GitHub repository: [citation-style-language/styl
 
 The [Zotero Style Repository](https://www.zotero.org/styles) is a nice facility to help you find, preview, and download different citation styles.
 
-## Formulae
+## Formulae
 
 The build script invokes `pandoc` with the `markdown+tex_math_dollars` option - which interprets LaTeX formulae surrounded by `$` signs. There should be no space after the opening `$` and no space before the closing `$`. eg.
 
