@@ -1,0 +1,13 @@
+# YAML 1.2
+---
+abstract: "This is a template for building a thesis PDF that's written in markdown, using features and styles from LaTeX."
+authors: 
+  - affiliation: "University of Oxford"
+    family-names: Westbury
+    given-names: Lewis
+    orcid: "https://orcid.org/https://orcid.org/0000-0002-5919-8942"
+cff-version: "1.1.0"
+message: "If referring to this template, please update CITATION.cff. If you use this template for your own thesis, you may wish to update CITATION.cff so that your thesis is easily cited."
+repository-code: "https://github.com/instantiator/markdown-thesis-builder"
+title: "Markdown Thesis Builder"
+...
