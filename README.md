@@ -83,6 +83,10 @@ NB. See sample files `05-XX-*` for an example of how to split out a large sectio
 
 If your structure requires more or fewer sections, edit `scripts/build.sh`, and modify the `for I` loop.
 
+### Being cited
+
+Repositories, such as this, can be made easy to cite using the `CITATION.cff` file. Find out more about how to edit `CITATION.cff` in the [Citation File Format](https://citation-file-format.github.io/) documentation.
+
 ## Footnotes
 
 Refer to your footnote with `[^1]` and provide the text of it anywhere in the document as:
@@ -91,7 +95,7 @@ Refer to your footnote with `[^1]` and provide the text of it anywhere in the do
 [^1]: this is the text
 ```
 
-## Citations
+## Citing other papers
 
 `bibliography.bib` is a BibTex file containing your references.
 
