@@ -23,23 +23,25 @@ cat 00*.md >> build/$THESIS_COVER_ROOT.formatted.md
 cat util/pagebreak.md >> build/$THESIS_COVER_ROOT.formatted.md
 
 # append each section to the thesis markdown
-for I in 0{1..8}; do
-  cat util/blank.md >> build/$THESIS_DOCUMENT_ROOT.md
-  cat util/pagebreak.md >> build/$THESIS_DOCUMENT_ROOT.formatted.md
+for FILENAME in `ls *.md | sort`; do
+  echo Appending file: $FILENAME
 
-  for FILENAME in `ls $I*.md | sort`; do
-    # FILENAME=$I*.md
-    cat $FILENAME >> build/$THESIS_DOCUMENT_ROOT.md
-    cat $FILENAME >> build/$THESIS_DOCUMENT_ROOT.formatted.md
-  done
+  cat util/blank.md >> build/$THESIS_DOCUMENT_ROOT.md
+  cat $FILENAME >> build/$THESIS_DOCUMENT_ROOT.md
+
+  cat util/blank.md >> build/$THESIS_DOCUMENT_ROOT.formatted.md
+  cat util/pagebreak.md >> build/$THESIS_DOCUMENT_ROOT.formatted.md
+  cat $FILENAME >> build/$THESIS_DOCUMENT_ROOT.formatted.md
 done
 
 # convert cover to PDF
+echo Building cover page PDF...
 pandoc \
   build/$THESIS_COVER_ROOT.formatted.md \
   -o build/$THESIS_DOCUMENT_ROOT.cover.pdf
 
 # convert thesis to PDF
+echo Building document body PDF...
 pandoc \
   --standalone \
   --number-sections \
@@ -53,6 +55,7 @@ pandoc \
   -o build/$THESIS_DOCUMENT_ROOT.body.pdf
 
 # combine cover and thesis into main document
+echo Combining documents...
 pdfunite \
   build/$THESIS_DOCUMENT_ROOT.cover.pdf \
   build/$THESIS_DOCUMENT_ROOT.body.pdf \
