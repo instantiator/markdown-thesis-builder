@@ -75,9 +75,11 @@ Illustrating footnotes, citations, formulae, figures, and automated bibliography
 
 Place your source files in the `source/` directory. The build script expects to find:
 
-* `00-cover.md` - the cover page of your thesis.
-* Markdown files with alphabetically sortable prefixes (eg. `01` to `08`) - the main sections of your thesis.
+* `cover/cover-page.md` - the cover page of your thesis.
+* Markdown files with prefixes (eg. `01` to `08`) - the main sections of your thesis.
 * `bibliography.bib` - a BibTex bibliography for your sources.
+
+The main sections of your thesis will be sorted alphabetically (and so also numerically), concatenated with page breaks between them, before conversion to the output format.
 
 NB. See sample files `05-XX-*` for an example of how to split out a large section into smaller files to make them a little easier to edit.
 

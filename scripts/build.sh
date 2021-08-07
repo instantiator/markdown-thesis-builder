@@ -18,26 +18,22 @@ mkdir -p build
 rm -rf build/* || true
 
 # create the cover page markdown
-cat 00*.md >> build/$THESIS_COVER_ROOT.md
-cat 00*.md >> build/$THESIS_COVER_ROOT.formatted.md
-cat util/pagebreak.md >> build/$THESIS_COVER_ROOT.formatted.md
+cat cover/cover-page.md >> build/$THESIS_COVER_ROOT.md
+cat util/pagebreak.md >> build/$THESIS_COVER_ROOT.md
 
 # append each section to the thesis markdown
 for FILENAME in `ls *.md | sort`; do
   echo Appending file: $FILENAME
 
   cat util/blank.md >> build/$THESIS_DOCUMENT_ROOT.md
+  cat util/pagebreak.md >> build/$THESIS_DOCUMENT_ROOT.md
   cat $FILENAME >> build/$THESIS_DOCUMENT_ROOT.md
-
-  cat util/blank.md >> build/$THESIS_DOCUMENT_ROOT.formatted.md
-  cat util/pagebreak.md >> build/$THESIS_DOCUMENT_ROOT.formatted.md
-  cat $FILENAME >> build/$THESIS_DOCUMENT_ROOT.formatted.md
 done
 
 # convert cover to PDF
 echo Building cover page PDF...
 pandoc \
-  build/$THESIS_COVER_ROOT.formatted.md \
+  build/$THESIS_COVER_ROOT.md \
   -o build/$THESIS_DOCUMENT_ROOT.cover.pdf
 
 # convert thesis to PDF
@@ -51,7 +47,7 @@ pandoc \
   --citeproc \
   --csl=util/$CITATION_STYLE \
   --bibliography=$BIBLIOGRAPHY \
-  build/$THESIS_DOCUMENT_ROOT.formatted.md \
+  build/$THESIS_DOCUMENT_ROOT.md \
   -o build/$THESIS_DOCUMENT_ROOT.body.pdf
 
 # combine cover and thesis into main document
